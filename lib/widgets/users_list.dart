@@ -80,3 +80,20 @@ class _UsersListPageState extends State<UsersListPage> {
     );
   }
 }
+
+class Person {
+  late String name;
+  late String email;
+
+  Person(this.name, this.email);
+
+  Person.fromJson(Map<String, dynamic> json) {
+    name = json['name'];
+    email = json['email'];
+  }
+
+  void usersEmail() {
+    debugPrint('The email for the user $name is $email');
+  }
+
+}
